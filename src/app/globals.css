@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-vazirmatn: 'Vazirmatn', sans-serif;
+}
+
+body {
+  background-color: #030303;
+  color: #f3f4f6;
+  font-family: var(--font-vazirmatn);
+  overflow-x: hidden;
+}
+
+/* Custom premium styling */
+.gold-card {
+  border: 0.05px solid transparent;
+  background-image:
+    linear-gradient(180deg, rgba(16, 15, 18, 0.95) 0%, rgba(7, 7, 8, 0.98) 100%),
+    linear-gradient(135deg, #a5823c98 0%, #fcf6baa8 25%, #b38728be 50%, #fbf5b7ab 75%, #aa761c6c 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.9),
+    inset 0 0 15px rgba(186, 142, 49, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.gold-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-card-hover:hover {
+  border-color: rgba(186, 142, 49, 0.4);
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(186, 142, 49, 0.15),
+    inset 0 0 20px rgba(186, 142, 49, 0.08);
+}
+
+/* Premium Gold Text Gradients */
+.text-gold-metallic {
+  background: linear-gradient(135deg, #c5a059 0%, #fdf8c7 25%, #c59733 50%, #fdf8c7 75%, #b48529 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-bright {
+  background: linear-gradient(135deg, #ffd700 0%, #fff8dc 40%, #ffae19 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-dim {
+  color: #dfba73;
+}
+
+/* Borders and lines */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) 1;
+}
+
+/* Shimmer animation for golden elements */
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-gold-shimmer {
+  background-size: 200% auto;
+  animation: gold-shimmer 6s linear infinite;
+}
+
+/* Custom glow effect */
+.gold-glow-node {
+  filter: drop-shadow(0 0 8px rgba(186, 142, 49, 0.35));
+}
+
+.gold-glow-text {
+  text-shadow: 0 0 10px rgba(186, 142, 49, 0.4);
+}
+
+.gold-glow-text-red {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.gold-glow-text-green {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+/* Progress ring styles */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Vault loader dots animation */
+@keyframes rotate-dots {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate-dots {
+  animation: rotate-dots 4s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(186, 142, 49, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(186, 142, 49, 0.5);
+}
