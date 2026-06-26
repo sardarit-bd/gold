@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react';
 const DEFAULT_STATE = {
   currentState: 1,
   dropNumber: 5,
-  totalSupply: 20,
-  soldCount: 17,
-  remainingCount: 3,
+  totalSupply: 80,
+  soldCount: 26,
+  remainingCount: 44,
   goldPrice: "6,850,000",
   goldPriceChange: "+0.35%",
   lastPurchaseTime: "2 دقیقه پیش"
@@ -629,7 +629,7 @@ export default function Dashboard() {
         </main>
 
         {/* GOLD DIVIDER LINE (Separates content from footer) */}
-        <div className="w-full h-[1.5px] bg-[#b38728]/45 my-1" />
+        <div className="w-full h-[1.5px] bg-[#b38728]/50 my-1" />
 
         {/* BOTTOM PANEL STATUS BAR (15% of viewport height) */}
         <footer className="w-full flex items-center justify-between z-10 py-4 pb-2">
